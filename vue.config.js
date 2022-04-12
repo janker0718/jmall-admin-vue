@@ -36,6 +36,15 @@ module.exports = {
       warnings: false,
       errors: true
     },
+    proxy: {
+      '/admin': {
+        target: 'http://localhost:8080', // 后端接口地址
+        changeOrigin: true, // 是否允许跨越
+        pathRewrite: {
+          '^/admin': '/admin' // 重写
+        }
+      }
+    },
     before: require('./mock/mock-server.js')
   },
   configureWebpack: {
