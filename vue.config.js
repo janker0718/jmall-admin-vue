@@ -24,6 +24,7 @@ module.exports = {
    * In most cases please use '/' !!!
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
+  runtimeCompiler: true,
   publicPath: '/',
   outputDir: 'dist',
   assetsDir: 'static',
@@ -44,8 +45,8 @@ module.exports = {
           '^/admin': '/admin' // 重写
         }
       }
-    },
-    before: require('./mock/mock-server.js')
+    }
+    // before: require('./mock/mock-server.js')
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that
